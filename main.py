@@ -23,7 +23,10 @@ def turn_counter_clockwise():
 
 
 def clear_screen():
-    t.reset()
+    t.clear()
+    t.penup()
+    t.home()
+    t.pendown()
 
 
 turtle.onkey(key='w', fun=move_forward)
