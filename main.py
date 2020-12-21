@@ -1,7 +1,7 @@
-from turtle import Turtle, Screen, onkey
+import turtle
 
-t = Turtle()
-scr = Screen()
+t = turtle.Turtle()
+scr = turtle.Screen()
 scr.listen()
 scr.title("Etch a Sketch")
 
@@ -22,8 +22,13 @@ def turn_counter_clockwise():
     t.left(10)
 
 
-onkey(key='w', fun=move_forward)
-onkey(key='a', fun=turn_counter_clockwise)
-onkey(key='s', fun=move_backward)
-onkey(key='d', fun=turn_clockwise)
+def clear_screen():
+    t.reset()
+
+
+turtle.onkey(key='w', fun=move_forward)
+turtle.onkey(key='a', fun=turn_counter_clockwise)
+turtle.onkey(key='s', fun=move_backward)
+turtle.onkey(key='d', fun=turn_clockwise)
+turtle.onkey(key='c', fun=clear_screen)
 scr.exitonclick()
