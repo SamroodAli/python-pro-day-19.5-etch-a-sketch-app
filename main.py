@@ -3,6 +3,7 @@ from turtle import Turtle, Screen, onkey
 t = Turtle()
 scr = Screen()
 scr.listen()
+scr.title("Etch a Sketch")
 
 
 def move_forward():
